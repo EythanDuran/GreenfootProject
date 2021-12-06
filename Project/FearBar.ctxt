@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=FearBar
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ fearBar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=width\ height\ player
+comment1.target=FearBar(int,\ int,\ Player)
+comment2.params=
+comment2.target=int\ getWidth()
+comment3.params=
+comment3.target=int\ getHeight()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=void\ drawBar()
+numComments=6
