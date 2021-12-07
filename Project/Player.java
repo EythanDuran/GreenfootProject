@@ -12,7 +12,7 @@ public class Player extends Actor
     private int maximumFear;
     
     public Player(){
-     maximumFear=10;
+     maximumFear=20;
      fear=maximumFear;
     }
     
@@ -28,8 +28,16 @@ public class Player extends Actor
      return (double)fear/maximumFear;   
     }
     
+    public void damagePlayer(int damage){
+        fear-=damage;
+        if(fear<=0){
+         Greenfoot.stop();
+         TittleScreen.stopMusic();
+        }  
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+      
     }    
 }

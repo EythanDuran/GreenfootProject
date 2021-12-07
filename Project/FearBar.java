@@ -38,4 +38,5 @@ public class FearBar extends Actor
         barImage.fillRect(0,0,fearPercentage,height);
         setImage(barImage);
     }
+    
 }

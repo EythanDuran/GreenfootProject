@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Start extends Buttons
+public class Start extends Button
 {
     public Start() 
     {
@@ -19,7 +19,7 @@ public class Start extends Buttons
     }    
     
     public void act(){
-        MouseOverSomething();
+        mouseOverSomething();
         checkClick(new Level1());
     }
  }

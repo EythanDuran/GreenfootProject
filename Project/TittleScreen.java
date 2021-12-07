@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TittleScreen extends World
 {
-    private GreenfootSound soundtrack=new GreenfootSound("TitleMusic.mp3");
+    private static GreenfootSound soundtrack=new GreenfootSound("TitleMusic.mp3");
     
     public TittleScreen()
     {    
@@ -35,15 +35,13 @@ public class TittleScreen extends World
 
         Records record=new Records();
         addObject(record,370,304);
-
-        
     }
     
-    public void startMusic(){
+    public static void startMusic(){
      soundtrack.play();   
     }
     
-    public void stopMusic(){
+    public static void stopMusic(){
      soundtrack.stop();   
     }
 }
