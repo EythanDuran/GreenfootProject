@@ -1,14 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Start here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Start extends Button
+public class Play extends Button
 {
-    public Start() 
+    public Play() 
     {
         GreenfootImage playButton=new GreenfootImage(110,60);
         Font changeFont=new Font(true,false,40);
@@ -20,7 +14,7 @@ public class Start extends Button
     
     public void act(){
         mouseOverSomething();
-        checkClick(new Level1());
+        checkClick(new Level());
     }
  }
 

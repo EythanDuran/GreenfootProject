@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class fearBar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class FearBar extends Actor
 {
     private int width;
@@ -38,5 +32,4 @@ public class FearBar extends Actor
         barImage.fillRect(0,0,fearPercentage,height);
         setImage(barImage);
     }
-    
 }

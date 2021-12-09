@@ -30,10 +30,5 @@ public class Scoreboard extends Actor
     public void updateScoreboardImage(){
         GreenfootImage scoreImage=new GreenfootImage(label,fontSize,textColor,backgroundColor);
         setImage(scoreImage);
-    }
-    
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    }  
 }

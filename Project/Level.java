@@ -1,29 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Level1 extends World
+public class Level extends World
 {
     private Scoreboard scoreboard;
     private Player player;
     private FearBar fearBar;
-    
-    public Level1()
+      
+    public Level()
     {    
        super(600, 400, 1,false);
        player=new Player();
        fearBar=new FearBar(100,20,player);
        scoreboard=new Scoreboard(0);
+       
        TittleScreen.startMusic();
        
        prepare();
     }
     
-    public Level1(Player secondLevelPlayer,Scoreboard secondLevelScoreboard, FearBar secondLevelFearBar)
+    public Level(Player secondLevelPlayer,Scoreboard secondLevelScoreboard, FearBar secondLevelFearBar)
     {
      super(600, 400, 1,false);
      this.player= secondLevelPlayer;
@@ -31,6 +26,12 @@ public class Level1 extends World
      this.scoreboard=secondLevelScoreboard;
      
      prepare();
+    }
+    
+    public void act(){
+      if(getObjects(Monster.class).size()==0){
+       Greenfoot.setWorld(new Level(player,scoreboard,fearBar));   
+      }
     }
     
     void prepare(){
@@ -42,8 +43,7 @@ public class Level1 extends World
      addObject(scoreboard,getWidth()/2,scoreboard.getImage().getHeight()/2);
      randomMonsterGeneration();
     }
-    
-    
+   
     public Scoreboard getScoreboard(){
      return scoreboard;   
     }
@@ -57,12 +57,5 @@ public class Level1 extends World
          monster.obtainPlayer(player);
          addObject(monster,x,y);
        }
-    }
-    
-    public void act(){
-      if(getObjects(Monster.class).size()==0){
-       Greenfoot.setWorld(new Level1(player,scoreboard,fearBar));   
-      }
-    }
-    
+    } 
 }

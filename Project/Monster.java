@@ -1,11 +1,5 @@
  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Monster here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Monster extends Actor
 {
     private int damage=1;
@@ -53,13 +47,12 @@ public class Monster extends Actor
        if(isAtEdge()){
          player.damagePlayer(damage);
         }
-       
     }
     
     public void monsterDefeated(){
         if(Greenfoot.mouseClicked(this)){
             
-            Level1 world=(Level1)getWorld();
+            Level world=(Level)getWorld();
             Scoreboard scoreboard=world.getScoreboard();
             scoreboard.updateScoreboard(monsterValue);
             
