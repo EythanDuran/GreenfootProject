@@ -1,28 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Buttons here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Buttons extends Actor
+public class Button extends Actor
 {
     private boolean mouseOver=false;
-    private static int maxTransparency=255;
+    private static final int MAX_TRANSPARENCY=255;
     
-    public void MouseOverSomething() 
+    public void mouseOverSomething() 
     {
         if(Greenfoot.mouseMoved(null))
         {
          mouseOver=Greenfoot.mouseMoved(this);
         }
+        
         if(mouseOver)
         {
-         changeTransparency(maxTransparency/2);
-         }else{
-            changeTransparency(maxTransparency);
-         }
+         changeTransparency(MAX_TRANSPARENCY/2);
+        }
+          else{
+          changeTransparency(MAX_TRANSPARENCY);
+          }
     }    
     
     public void changeTransparency(int change){
@@ -32,10 +28,11 @@ public class Buttons extends Actor
     }
     
     public void checkClick(World world){
-     MouseOverSomething();
+     mouseOverSomething();
      
-        if(Greenfoot.mouseClicked(this)){
-         Greenfoot.setWorld(world);     
-        }
+      if(Greenfoot.mouseClicked(this))
+      {
+        Greenfoot.setWorld(world);     
+      }
     }
 }
