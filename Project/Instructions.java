@@ -1,25 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Instructions here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Instructions extends Buttons
+public class Instructions extends Button
 {
-    public Instructions() 
+    GreenfootSound soundtrack;
+
+    public Instructions(GreenfootSound soundtrack) 
     {
-        GreenfootImage InstructionButton=new GreenfootImage(280,60);
+        GreenfootImage instructionButton=new GreenfootImage(280,60);
         Font changeFont=new Font(true,false,40);
-        InstructionButton.setFont(changeFont);
-        InstructionButton.setColor(Color.WHITE);
-        InstructionButton.drawString("Instructions",0,50);
-        setImage(InstructionButton);
+        instructionButton.setFont(changeFont);
+        instructionButton.setColor(Color.WHITE);
+        instructionButton.drawString("Instructions",0,50);
+        setImage(instructionButton);
+        
+        this.soundtrack=soundtrack;
     }    
-    
-    public void act(){
-        MouseOverSomething();
-        checkClick(new InstructionsMenu());
+
+    public void clicked(){
+        Greenfoot.setWorld(new InstructionsMenu(soundtrack));
     }  
+
 }

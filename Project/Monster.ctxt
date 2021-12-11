@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Monster
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Monster\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=screen
 comment1.target=Monster(greenfoot.World)
 comment2.params=
@@ -8,5 +7,7 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ monsterMovement()
 comment4.params=
-comment4.target=void\ deleteMonster()
-numComments=5
+comment4.target=void\ monsterDefeated()
+comment5.params=playerInGame
+comment5.target=void\ obtainPlayer(Player)
+numComments=6

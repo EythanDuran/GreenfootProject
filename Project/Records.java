@@ -1,14 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Records here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Records extends Buttons
+public class Records extends Button
 {
-   public Records() 
+    private RecordManager recordManager;
+    GreenfootSound soundtrack;
+
+    public Records(RecordManager recordManager,GreenfootSound soundtrack) 
     {
         GreenfootImage recordButton=new GreenfootImage(280,60);
         Font changeFont=new Font(true,false,40);
@@ -16,10 +13,12 @@ public class Records extends Buttons
         recordButton.setColor(Color.WHITE);
         recordButton.drawString("Records",0,50);
         setImage(recordButton);
+        
+        this.recordManager = recordManager;
+        this.soundtrack=soundtrack;
     }    
-    
-    public void act(){
-        MouseOverSomething();
-        checkClick(new InstructionsMenu());
+
+    public void clicked(){
+        Greenfoot.setWorld(new RecordsScreen(recordManager,soundtrack));
     }    
 }

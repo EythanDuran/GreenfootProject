@@ -1,0 +1,5 @@
+default,780
+default,560
+ray2,420
+ray,240
+rat4,220

@@ -1,35 +1,34 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Player extends Actor
 {
     private int fear;
     private int maximumFear;
-    
-    public Player(){
-     maximumFear=10;
-     fear=maximumFear;
+    private Scoreboard score;
+    private RecordManager recordManager;
+    private Record record;
+    GreenfootSound soundtrack;
+    FearBar fearbar;
+
+    public Player(Record record,RecordManager recordManager,GreenfootSound soundtrack,  FearBar fearbar){
+        maximumFear=30;
+        fear=maximumFear;
+        this.record=record;
+        this.recordManager=recordManager;
+        this.soundtrack=soundtrack;
+        this.fearbar=fearbar;
     }
-    
-    public int getFear(){
-        return fear;
-    }
-    
-    public void setFear(int fear){
-     this.fear=fear;   
-    }
-    
+
     public double getFearStatus(){
-     return (double)fear/maximumFear;   
+        return (double)fear/maximumFear;   
     }
-    
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+
+    public void damagePlayer(int damage){
+        fear-=damage;
+        fearbar.updateFearbar();
+        if(fear<=0){
+
+            Greenfoot.setWorld(new GameOver(record,recordManager,soundtrack));
+        }  
+    }
 }

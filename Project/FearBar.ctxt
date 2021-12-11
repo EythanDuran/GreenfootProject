@@ -1,14 +1,13 @@
 #BlueJ class context
 comment0.target=FearBar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ fearBar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=width\ height\ player
 comment1.target=FearBar(int,\ int,\ Player)
-comment2.params=
-comment2.target=int\ getWidth()
+comment2.params=player
+comment2.target=void\ setPlayer(Player)
 comment3.params=
-comment3.target=int\ getHeight()
+comment3.target=int\ getWidth()
 comment4.params=
-comment4.target=void\ act()
+comment4.target=int\ getHeight()
 comment5.params=
-comment5.target=void\ drawBar()
+comment5.target=void\ updateFearbar()
 numComments=6

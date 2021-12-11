@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Play
+comment1.params=recordManager\ record\ soundtrack
+comment1.target=Play(RecordManager,\ Record,\ greenfoot.GreenfootSound)
+comment2.params=
+comment2.target=void\ clicked()
+numComments=3
