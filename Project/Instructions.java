@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Instructions extends Button
 {
-    public Instructions() 
+    GreenfootSound soundtrack;
+
+    public Instructions(GreenfootSound soundtrack) 
     {
         GreenfootImage instructionButton=new GreenfootImage(280,60);
         Font changeFont=new Font(true,false,40);
@@ -10,11 +12,12 @@ public class Instructions extends Button
         instructionButton.setColor(Color.WHITE);
         instructionButton.drawString("Instructions",0,50);
         setImage(instructionButton);
+        
+        this.soundtrack=soundtrack;
     }    
-    
-    public void act(){
-        mouseOverSomething();
-        checkClick(new InstructionsMenu());
+
+    public void clicked(){
+        Greenfoot.setWorld(new InstructionsMenu(soundtrack));
     }  
-    
+
 }

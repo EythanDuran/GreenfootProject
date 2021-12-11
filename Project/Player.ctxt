@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=
-comment1.target=Player()
+comment1.params=record\ recordManager\ soundtrack\ fearbar
+comment1.target=Player(Record,\ RecordManager,\ greenfoot.GreenfootSound,\ FearBar)
 comment2.params=
 comment2.target=double\ getFearStatus()
 comment3.params=damage

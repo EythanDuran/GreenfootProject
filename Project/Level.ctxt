@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Level
-comment1.params=
-comment1.target=Level()
-comment2.params=secondLevelPlayer\ secondLevelScoreboard\ secondLevelFearBar
-comment2.target=Level(Player,\ Scoreboard,\ FearBar)
+comment1.params=recordManager\ record\ soundtrack
+comment1.target=Level(RecordManager,\ Record,\ greenfoot.GreenfootSound)
+comment2.params=secondLevelPlayer\ secondLevelScoreboard\ secondLevelFearBar\ monsterAmount\ counter\ recordManager\ record\ soundtrack
+comment2.target=Level(Player,\ Scoreboard,\ FearBar,\ int,\ int,\ RecordManager,\ Record,\ greenfoot.GreenfootSound)
 comment3.params=
 comment3.target=void\ act()
 comment4.params=

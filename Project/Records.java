@@ -2,7 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Records extends Button
 {
-   public Records() 
+    private RecordManager recordManager;
+    GreenfootSound soundtrack;
+
+    public Records(RecordManager recordManager,GreenfootSound soundtrack) 
     {
         GreenfootImage recordButton=new GreenfootImage(280,60);
         Font changeFont=new Font(true,false,40);
@@ -10,10 +13,12 @@ public class Records extends Button
         recordButton.setColor(Color.WHITE);
         recordButton.drawString("Records",0,50);
         setImage(recordButton);
+        
+        this.recordManager = recordManager;
+        this.soundtrack=soundtrack;
     }    
-    
-    public void act(){
-        mouseOverSomething();
-        checkClick(new RecordsScreen());
+
+    public void clicked(){
+        Greenfoot.setWorld(new RecordsScreen(recordManager,soundtrack));
     }    
 }
